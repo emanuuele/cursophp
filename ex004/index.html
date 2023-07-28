@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interações com formularios</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <h1>Apresente-se para nós</h1>
+    </header>
+    <section>
+        <form action="cad.php" method="get">
+            <label for="n1">1º numero</label>
+            <input type="text" name="n1" id="n1">
+
+            <label for="n2">2º numero</label>
+            <input type="text" name="n2" id="idn2">
+
+            <label for="op">Operação</label>
+            <select name="op" id="idop">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+</body>
+</html>
