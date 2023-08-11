@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultado</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
     <header>
@@ -33,7 +33,7 @@
                     $resultado = 0;
                     break;
             }
-            echo "<p>$resultado</p>";
+            echo "<p>Resultado: $resultado</p>";
         ?>
 
         <p><a href="javascript:history.go(-1)">Voltar para página anterior</a></p>
