@@ -29,10 +29,12 @@
         if (curl_error($cotacaoHoje)) {
             echo curl_error($cotacaoHoje);
         } else {
+
+            $padrao = numfmt_create("pt_BR", NumberFormatter::CURRENCY);
             $dados = json_decode($response);
             $valorCtHoje = round($dados->value[0]->cotacaoCompra, 2);
-            $valorTotal = $value * $valorCtHoje;
-            echo "Convertendo R\$$value para dólar, fica $valorTotal. Cotação: $valorCtHoje";
+            $valorTotal = $value / $valorCtHoje;
+            echo "Convertendo " . numfmt_format_currency($padrao, $value, "BRL") . " para dólar, fica " . numfmt_format_currency($padrao, $valorTotal, "BRL") . ". Cotação: " . numfmt_format_currency($padrao, $valorCtHoje, "USD");
         }
         
         curl_close($cotacaoHoje)
